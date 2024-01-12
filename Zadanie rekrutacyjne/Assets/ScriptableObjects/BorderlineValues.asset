@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e92ec91e16574d4ca0bd91034e09779, type: 3}
   m_Name: BorderlineValues
   m_EditorClassIdentifier: 
-  attributes: []
+  attributes:
+  - minMax: {x: 1, y: 4}
+    attributeType: 0
+  - minMax: {x: 80, y: 160}
+    attributeType: 1
+  - minMax: {x: 5, y: 10}
+    attributeType: 2

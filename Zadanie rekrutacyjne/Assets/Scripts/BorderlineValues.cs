@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "BorderlineValues")]
 public class BorderlineValues : ScriptableObject
 {
-    public enum AttributesType{MoveSpeed, Agility, Endurance, JumpHeight}
+    public enum AttributesType{MoveSpeed, Agility, Endurance}
     [SerializeField]
     private Attribute[] attributes;
     public Attribute[] Attributes
@@ -18,14 +18,20 @@ public class BorderlineValues : ScriptableObject
     {
         [SerializeField]
         private Vector2 minMax;
+
+        public Vector2 MinMax
+        {
+            get { return minMax; }
+        }
         [SerializeField]
         private AttributesType attributeType;
 
-        public Attribute(Vector2 minMax, AttributesType attributeType)
-        {
-            this.minMax = minMax;
-            this.attributeType = attributeType;
+        public AttributesType AttributeType 
+        { 
+            get { return attributeType; } 
         }
+
+        
 
     }
 
