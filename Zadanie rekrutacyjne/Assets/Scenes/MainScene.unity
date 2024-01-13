@@ -461,6 +461,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountOfUnits: 3
+  minAmountOfUnits: 3
+  maxAmountOfUnits: 34
   unitsCounter: {fileID: 1074543111}
   decreaseAmountButton: {fileID: 961959654}
   increaseAmountButton: {fileID: 1896122916}
@@ -1855,7 +1857,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 99853fa6049a7f245be5b404d33e573b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1926,7 +1928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1461940042
 RectTransform:
   m_ObjectHideFlags: 0

@@ -8,7 +8,10 @@ public class UnitsCreator : MonoBehaviour
 {
     [SerializeField]
     private int amountOfUnits;
+    [SerializeField]
     private int minAmountOfUnits;
+    [SerializeField]
+    private int maxAmountOfUnits;
     [SerializeField]
     private TextMeshProUGUI unitsCounter;
     [SerializeField]
@@ -33,7 +36,6 @@ public class UnitsCreator : MonoBehaviour
         decreaseAmountButton.onClick.AddListener(DecreaseAmount);
         increaseAmountButton.onClick.AddListener(IncreaseAmount);
         confirmButton.onClick.AddListener(Confirm);
-        minAmountOfUnits = amountOfUnits;
         unitsCounter.text = amountOfUnits.ToString();
     }
 
@@ -53,8 +55,11 @@ public class UnitsCreator : MonoBehaviour
 
     private void IncreaseAmount()
     {
-        amountOfUnits++;
-        unitsCounter.text = amountOfUnits.ToString();
+        if (amountOfUnits < maxAmountOfUnits)
+        {
+            amountOfUnits++;
+            unitsCounter.text = amountOfUnits.ToString();
+        }
     }
 
     private void CreateUnits()
