@@ -11,7 +11,7 @@ public class DestinationSetter : MonoBehaviour
     private UnitSelectButtonHandler buttonHandler;
     [SerializeField]
     private UnitsCreator unitsCreator;
-    private const int mouseButton = 0;
+    private const int mouseButtonIndex = 0;
     private void Update()
     {
         CheckForPoint();
@@ -19,7 +19,7 @@ public class DestinationSetter : MonoBehaviour
 
     private void CheckForPoint()
     {
-        if (Input.GetMouseButtonDown(mouseButton))
+        if (Input.GetMouseButtonDown(mouseButtonIndex))
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

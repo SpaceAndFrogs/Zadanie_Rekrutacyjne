@@ -10,7 +10,7 @@ public class Unit : MonoBehaviour
     private float agility;
     private float endurance;
     [SerializeField]
-    private float moveSpeedOnFatigueDecrease = 1;
+    private float moveSpeedOnFatigueDecrease;
     [SerializeField]
     private BorderlineValues borderlineValues;
     [SerializeField]
@@ -58,9 +58,10 @@ public class Unit : MonoBehaviour
 
             }
 
-            navMeshAgent.speed = moveSpeed;
-            navMeshAgent.angularSpeed = agility;
+            
         }
+        navMeshAgent.speed = moveSpeed;
+        navMeshAgent.angularSpeed = agility;
     }
 
     public void SetDestination(Vector3 destination)
@@ -118,9 +119,9 @@ public class Unit : MonoBehaviour
 
         Unit hittedUnit = collision.collider.GetComponent<Unit>();
 
-        if (hittedUnit != null) 
+        if (hittedUnit != null)
         {
-            if(Vector3.Distance(transform.position,unitToFollow.transform.position) > Vector3.Distance(hittedUnit.transform.position, unitToFollow.transform.position))
+            if (Vector3.Distance(transform.position, unitToFollow.transform.position) > Vector3.Distance(hittedUnit.transform.position, unitToFollow.transform.position))
             {
                 navMeshAgent.speed = 0;
             }

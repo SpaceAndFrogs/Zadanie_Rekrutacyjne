@@ -28,7 +28,6 @@ public class UnitSelectButtonHandler : MonoBehaviour
     private void ChooseUnit(int indexOfUnit)
     {
         indexOfSelectedUnit = indexOfUnit;
-        Debug.Log("Choosen unit " + indexOfUnit);
     }
 
     public void CreateButtons(int amountOfUnits)
