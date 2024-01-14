@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BorderlineValues
   m_EditorClassIdentifier: 
   attributes:
-  - minMax: {x: 1, y: 4}
+  - minMax: {x: 2, y: 5}
     attributeType: 0
   - minMax: {x: 80, y: 160}
     attributeType: 1
-  - minMax: {x: 5, y: 10}
+  - minMax: {x: 10, y: 20}
     attributeType: 2
